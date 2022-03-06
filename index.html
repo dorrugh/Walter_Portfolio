@@ -1,12 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Walter's Portfolio</title>
-</head>
-<body>               
-    
-</body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <!-- Header  -->
+    <header>
+      <div class="logo">
+        <img src="Images/logo (1).png" alt="Walter's Logo'" />
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">Areas of Expertise</a>
+          </li>
+          <li class="nav__item">
+            <a href="#work" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About Me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro" id="home">
+      <h1 class="section__title section__title--intro">
+        Hey! I'm <strong> Walter Thomas!</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        Software Developer
+      </p>
+      <img src="Images/output-onlinepngtools.png" alt="A picture of Walter" class="intro__img"/>
+    </section>
+
+    <!-- Area's of Expertise -->
+    <section class="my-services" id="services">
+      <h2 class="section__title section__title--services">
+        Areas Of Expertise
+      </h2>
+
+      <div class="services">
+        <div class="service">
+          <h3>Front End</h3>
+          <p>
+            <strong>**Placeholder**</strong>
+          </p>
+        </div>
+
+        <div class="service">
+          <h3>Back End</h3>
+          <p>
+            <strong>**Placeholder**</strong>
+          </p>
+        </div>
+
+        <div class="service">
+          <h3>Databases</h3>
+          <p>
+            <strong>**Placeholder**</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="service">
+        <h3>Cloud</h3>
+        <p>
+          <strong>**Placeholder**</strong>
+        </p>
+      </div>
+
+      <a href="/Docs/Resume(Walter).pdf" download class="btn"
+        >Take a look at my resume</a>
+    </section>
+
+    <!-- About Me -->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">Who Is Walter?</h2>
+      <p class="section__subtitle section__subtitle--about">
+        Your Friendly Neighborhood Developer
+      </p>
+
+      <div class="about-me__body">
+        <p>
+          <strong>**Placeholder**</strong>
+        </p>
+        <p>
+          <strong>**Pleaceholder**</strong>
+        </p>
+      </div>
+
+      <img src="Images/IMG-2006.jpg" alt="Walter At The Beach" class="about-me__img"/>
+    </section>
+
+    <!-- Projects -->
+    <section class="my-work" id="work">
+      <h2 class="section__title section__title--work">Projects</h2>
+      <div class="container" style="padding-top: 3px">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+          </ol>
+
+          <!-- Contents of the carousel -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="Images/i01_The Hub.jpg" alt="Project Screenshot" />
+              <div class="carousel-caption">
+                <h3>The Hub</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="Images/i01_ThePCADDash.jpg" alt="Project Screenshot" />
+              <div class="carousel-caption">
+                <h3>The PCADDash</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- left and right control for the carousel -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#myCarousel"
+            data-slide="next"
+          >
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <a asp-action="Index" asp-controller="Projects" class="btn"
+        >Take a Look At My Projects!</a
+      >
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+      <a href="mailto:walter.l.thomas@outlook.com" class="footer__link">Email</a>
+      <ul class="social-list">
+        <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/walterlthomas" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li class="social-list__item"><a class="social-list__link" href="https://github.com/dorrugh" target="_blank"><i class="fab fa-github-square"></i></a></li>
+      </ul>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="Index.js"></script>
+  </body>
 </html>
